@@ -71,12 +71,21 @@
 
         .body-div {
             display: inline-grid;
-            grid-template-columns: auto auto auto auto auto auto;
             vertical-align: middle;
             padding-left: 4rem;
             padding-top: 6rem;
-
         }
+        @media (min-width: 481px) {
+        .body-div {
+            grid-template-columns: repeat(7, auto);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .body-div {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
 
         .body-container {
             display: flex;
